@@ -11,8 +11,8 @@ class Scraper
   end
   
   
-  def self.scrape_single_movie(url)
-    doc = Nokogiri::HTML(open("https://www.rottentomatoes.com#{url}"))
+  def self.scrape_single_movie(movie)
+    doc = Nokogiri::HTML(open("https://www.rottentomatoes.com#{movie.url}"))
     
     movie.release_date = doc.css("ul.content-meta time")[0].text.strip
     movie.runtime = doc.css("ul.content-meta time")[2].text.strip

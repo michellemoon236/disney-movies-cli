@@ -12,4 +12,8 @@ class Movie
     @@all
   end
   
+  def self.alphabetized_list
+    @@all.each.sort_by { |movie| movie.name}
+  end
+  
 end
