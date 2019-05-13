@@ -16,8 +16,8 @@ class Scraper
     
     movie.release_date = doc.css("ul.content-meta time")[0].text.strip
     movie.runtime = doc.css("ul.content-meta time")[2].text.strip
-    movie.directors = doc.css("ul.content-meta li.meta-row")[2].css("div.meta-value a").collect { |i| i.text}.join(", ")
-    movie.writers = doc.css("ul.content-meta li.meta-row")[3].css("div.meta-value a").collect { |i| i.text}.join(", ")
+    movie.director = doc.css("ul.content-meta li.meta-row")[2].css("div.meta-value a").collect { |i| i.text}.join(", ")
+    movie.writer = doc.css("ul.content-meta li.meta-row")[3].css("div.meta-value a").collect { |i| i.text}.join(", ")
     movie.description = doc.css("div#movieSynopsis")[0].text.strip
   end
   

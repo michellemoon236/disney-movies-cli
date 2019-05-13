@@ -47,9 +47,9 @@ class CLI
     puts ""
     puts "Runtime: #{movie.runtime}"
     puts ""
-    puts "Directors: #{movie.directors}"
+    puts "Director(s): #{movie.director}"
     puts ""
-    puts "Writers: #{movie.writers}"
+    puts "Writer(s): #{movie.writer}"
     puts ""
   end 
   
