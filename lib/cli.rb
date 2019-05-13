@@ -24,7 +24,8 @@ class CLI
       else
         puts "I'm sorry I didn't recognize that option. Please enter a valid option from the menu."
       end
-    end 
+    end
+    puts "Goodbye!"
   end
   
   def print_movies
@@ -39,7 +40,8 @@ class CLI
     puts ""
     puts "#{movie.name}"
     puts ""
-    puts "Description: #{movie.description}"
+    puts "Description:"
+    puts "#{movie.description}"
     puts ""
     puts "Release Date: #{movie.release_date}"
     puts ""
