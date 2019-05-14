@@ -21,7 +21,7 @@ class CLI
         print_single_movie(Movie.alphabetized_list[input.to_i-1])
       elsif input == "list"
         print_movies
-      else
+      elsif input != "exit"
         puts "I'm sorry I didn't recognize that option. Please enter a valid option from the menu."
       end
     end
