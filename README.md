@@ -1,35 +1,17 @@
-# Disney::Movies::Cli
+# Disney Movies CLI
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/disney/movies/cli`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This CLI program lists Disney's 50 best animated movies per the website Rotten Tomatoes. It also provides more information for each movie as requested by the user including movie description, release date, runtime, director(s), and writer(s).
 
 ## Installation
 
-Add this line to your application's Gemfile:
+You can clone from the git repository by typing the following command in your terminal:
 
-```ruby
-gem 'disney-movies-cli'
-```
+    git clone git@github.com:michellemoon236/disney-movies-cli.git
 
-And then execute:
+To run, type the following:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install disney-movies-cli
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
+    ruby bin/run
+    
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/'michellem'/disney-movies-cli. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
@@ -38,6 +20,3 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/'miche
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
-## Code of Conduct
-
-Everyone interacting in the Disney::Movies::Cli project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'michellem'/disney-movies-cli/blob/master/CODE_OF_CONDUCT.md).
