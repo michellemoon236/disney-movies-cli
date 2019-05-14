@@ -4,7 +4,7 @@ class CLI
     puts "Welcome to Disney Movies!"
     puts "Here is a list of Disney's best animated movies:"
     Scraper.scrape_movie_list
-    print_movies
+    print_movie_list
     input = ""
     while input != "exit" do
       puts "--------------------------------"
@@ -17,10 +17,11 @@ class CLI
       input = gets.strip.downcase
       
       if (1..50).include?(input.to_i)
-        Scraper.scrape_single_movie(Movie.alphabetized_list[input.to_i-1]) if !Movie.alphabetized_list[input.to_i-1].runtime
-        print_single_movie(Movie.alphabetized_list[input.to_i-1])
+        single_movie = Movie.alphabetized_list[input.to_i-1]
+        Scraper.scrape_single_movie(single_movie) if !single_movie.runtime
+        print_single_movie(single_movie)
       elsif input == "list"
-        print_movies
+        print_movie_list
       elsif input != "exit"
         puts "I'm sorry I didn't recognize that option. Please enter a valid option from the menu."
       end
@@ -28,7 +29,7 @@ class CLI
     puts "Goodbye!"
   end
   
-  def print_movies
+  def print_movie_list
     puts "--------------------------------"
     Movie.alphabetized_list.each.with_index(1) do |movie, index|
       puts "#{index}. #{movie.name}"
