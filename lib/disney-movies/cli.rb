@@ -42,16 +42,16 @@ class CLI
     puts ""
     puts "#{movie.name.upcase}".colorize(:light_blue)
     puts ""
-    puts "Description:"
+    puts "Description:".colorize(:light_blue)
     puts "#{movie.description}"
     puts ""
-    puts "Release Date: #{movie.release_date}"
+    puts "Release Date:".colorize(:light_blue) + " #{movie.release_date}"
     puts ""
-    puts "Runtime: #{movie.runtime}"
+    puts "Runtime:".colorize(:light_blue) + " #{movie.runtime}"
     puts ""
-    puts "Director(s): #{movie.director}"
+    puts "Director(s):".colorize(:light_blue) + " #{movie.director}"
     puts ""
-    puts "Writer(s): #{movie.writer}"
+    puts "Writer(s):".colorize(:light_blue) + " #{movie.writer}"
     puts ""
   end 
   
