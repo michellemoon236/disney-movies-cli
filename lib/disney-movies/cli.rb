@@ -1,18 +1,19 @@
 class CLI 
   
   def run 
-    puts "Welcome to Disney Movies!"
-    puts "Here is a list of Disney's best animated movies:"
+    puts ""
+    puts "Welcome to Disney Movies!".colorize(:light_blue)
+    puts "Here is a list of Disney's best animated movies:".colorize(:light_blue)
     Scraper.scrape_movie_list
     print_movie_list
     input = ""
     while input != "exit" do
-      puts "--------------------------------"
-      puts "MENU"
+      puts "---------------------------------------------------------".colorize(:light_blue)
+      puts "MENU".colorize(:light_blue)
       puts "To see details of a movie, enter the number of the movie."
       puts "To see the movie list again, enter 'list'."
       puts "To exit the program, enter 'exit'."
-      puts "--------------------------------"
+      puts "---------------------------------------------------------".colorize(:light_blue)
       
       input = gets.strip.downcase
       
@@ -30,16 +31,16 @@ class CLI
   end
   
   def print_movie_list
-    puts "--------------------------------"
+    puts "---------------------------------------------------------".colorize(:light_blue)
     Movie.alphabetized_list.each.with_index(1) do |movie, index|
       puts "#{index}. #{movie.name}"
     end
   end
   
   def print_single_movie(movie)
-    puts "--------------------------------"
+    puts "---------------------------------------------------------".colorize(:light_blue)
     puts ""
-    puts "#{movie.name}"
+    puts "#{movie.name.upcase}".colorize(:light_blue)
     puts ""
     puts "Description:"
     puts "#{movie.description}"
