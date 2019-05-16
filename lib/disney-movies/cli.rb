@@ -1,12 +1,22 @@
 class CLI 
   
   def run 
-    puts ""
-    puts "Welcome to Disney Movies!".colorize(:light_blue)
-    puts "Here is a list of Disney's best animated movies:".colorize(:light_blue)
+    welcome
     Scraper.scrape_movie_list
     print_movie_list
+    menu
+    puts "Goodbye!"
+  end
+  
+  def welcome
+    puts ""
+    puts "Welcome to Disney Movies!".colorize(:light_blue)
+    puts "Here is a list of Disney's best animated movies:".colorize(:light_blue)   
+  end
+  
+  def menu
     input = ""
+    
     while input != "exit" do
       puts "---------------------------------------------------------".colorize(:light_blue)
       puts "MENU".colorize(:light_blue)
@@ -26,8 +36,7 @@ class CLI
       elsif input != "exit"
         puts "I'm sorry I didn't recognize that option. Please enter a valid option from the menu."
       end
-    end
-    puts "Goodbye!"
+    end    
   end
   
   def print_movie_list
